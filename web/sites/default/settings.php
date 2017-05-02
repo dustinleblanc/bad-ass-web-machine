@@ -39,3 +39,8 @@ if (file_exists($local_settings)) {
  */
 $settings['install_profile'] = 'standard';
 
+// Hack to handle containers not supplying $_ENV vars to PHP
+if (!isset($settings['hash_salt']) && getenv('DRUPAL_HASH_SALT')) {
+  $settings['hash_salt'] = getenv('DRUPAL_HASH_SALT');
+}
+

@@ -50,8 +50,7 @@
   },
   "scripts": {
     "build-assets": [
-      "@prepare-for-pantheon",
-      "composer install --optimize-autoloader"
+      "./scripts/composer/install-or-update"
     ],
     "drupal-unit-tests": "cd web/core && ../../vendor/bin/phpunit --testsuite=unit --exclude-group Composer,DependencyInjection,PageCache",
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -66,7 +65,10 @@
     "post-create-project-cmd": [
       "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
+    ],
+    "get:backup": "robo get:backup",
+    "test": "robo test",
+    "up": "robo up"
   },
   "extra": {
     "installer-paths": {
