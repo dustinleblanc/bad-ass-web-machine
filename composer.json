@@ -22,7 +22,8 @@
     "drush/drush": "~8",
     "drupal/config_installer": "^1.0",
     "drupal/config_direct_save": "^1.0",
-    "drupal/amp": "1.0"
+    "drupal/amp": "1.0",
+    "drupal/amptheme": "1.0"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -72,6 +73,7 @@
     "up": "robo up"
   },
   "extra": {
+    "enable-patching": true,
     "installer-paths": {
       "web/core": ["type:drupal-core"],
       "web/modules/contrib/{$name}": ["type:drupal-module"],
@@ -100,6 +102,11 @@
         ".htaccess",
         "web.config"
       ]
+    },
+    "patches": {
+      "drupal/amptheme": {
+        "amp-skip-link template couldn't be found": "https://www.drupal.org/files/issues/amp_skip_link_-2848068-3.patch"
+      }
     }
   }
 }
