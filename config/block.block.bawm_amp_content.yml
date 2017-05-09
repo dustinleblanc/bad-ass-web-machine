@@ -1,0 +1,22 @@
+uuid: 2e9cdd0f-191e-4039-8d8e-9346f261ed8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bawm_amp
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bawm_amp_content
+theme: bawm_amp
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

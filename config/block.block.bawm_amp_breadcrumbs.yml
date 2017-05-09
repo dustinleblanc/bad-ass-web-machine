@@ -1,0 +1,22 @@
+uuid: cf4ecd13-1fd2-4b13-8b05-e7dc9e65dd3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bawm_amp
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: bawm_amp_breadcrumbs
+theme: bawm_amp
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

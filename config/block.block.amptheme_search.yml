@@ -1,0 +1,22 @@
+uuid: 9a727485-ddde-4f14-930e-beb03452cdc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - amptheme
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: amptheme_search
+theme: amptheme
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

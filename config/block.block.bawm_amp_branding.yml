@@ -1,0 +1,25 @@
+uuid: 7937ed9e-35f4-49c9-97c7-3b76b2e2a4c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bawm_amp
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: bawm_amp_branding
+theme: bawm_amp
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

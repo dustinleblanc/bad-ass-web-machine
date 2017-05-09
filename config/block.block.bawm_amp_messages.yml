@@ -1,0 +1,22 @@
+uuid: 335f0392-a4d7-4428-b280-c067fca7d841
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bawm_amp
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bawm_amp_messages
+theme: bawm_amp
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
