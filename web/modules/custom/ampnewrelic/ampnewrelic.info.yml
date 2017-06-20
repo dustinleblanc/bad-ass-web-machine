@@ -1,0 +1,7 @@
+name: Amp New Relic
+type: module
+description: Disable New Relic Javascript on Amp pages.
+core: 8.x
+package: Custom
+dependencies:
+  - amp

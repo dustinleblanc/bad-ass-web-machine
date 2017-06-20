@@ -1,0 +1,7 @@
+services:
+  ampnewrelic.default:
+    class: Drupal\ampnewrelic\EventSubscriber\AmpnewrelicSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+

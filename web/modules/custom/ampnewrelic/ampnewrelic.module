@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains ampnewrelic.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ampnewrelic_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ampnewrelic module.
+    case 'help.page.ampnewrelic':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Disable New Relic Javascript on Amp pages.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ampnewrelic_theme() {
+  return [
+    'ampnewrelic' => [
+      'render element' => 'children',
+    ],
+  ];
+}
