@@ -12,7 +12,6 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
  */
 class AmpnewrelicSubscriber implements EventSubscriberInterface {
 
-
   /**
    * Constructs a new AmpnewrelicSubscriber object.
    */
@@ -23,7 +22,7 @@ class AmpnewrelicSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  public static function getSubscribedEvents() {
     $events['kernel.request'] = ['disableNewRelic'];
 
     return $events;
@@ -33,7 +32,7 @@ class AmpnewrelicSubscriber implements EventSubscriberInterface {
    * This method is called whenever the kernel.request event is
    * dispatched.
    *
-   * @param GetResponseEvent $event
+   * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
    */
   public function disableNewRelic(GetResponseEvent $event) {
     if (extension_loaded('newrelic') && $this->isAmpRequest($event)) {
@@ -42,6 +41,9 @@ class AmpnewrelicSubscriber implements EventSubscriberInterface {
     }
   }
 
+  /**
+   *
+   */
   private function isAmpRequest(GetResponseEvent $event) {
     return $event->getRequest()->query->get('amp');
   }

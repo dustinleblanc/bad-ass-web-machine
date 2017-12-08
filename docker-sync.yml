@@ -1,8 +1,0 @@
-version: "2"
-
-syncs:
-  bawm-unison-sync:
-    src: './'
-    dest: '/var/www/html'
-    sync_userid: '82'
-    sync_excludes: ['.gitignore', '.git/', '.idea/']
